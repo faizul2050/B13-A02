@@ -1,0 +1,43 @@
+
+.logo {
+
+}
+/* shared style */ 
+.display-flex {
+    display: flex;
+}
+
+/* white */
+.text-white{
+    color: #FFFFFF;
+}
+/* ash */
+.text-ash{
+    color: #1A0B2E;
+}
+/* green */
+.text-green{
+    color: #00FF88;
+}
+
+
+
+/* header style */ 
+
+/* navbar related style */ 
+.navbar {
+    
+}
+.nav-item{
+    list-style: none;
+    margin: 30px;
+}
+.nav-links {
+    text-decoration: none;
+    font-weight: 500;
+  
+
+
+
+   
+}
