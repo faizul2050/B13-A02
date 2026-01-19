@@ -17,11 +17,12 @@
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: var(--dark-bg);
+        background-color: #1a0b2e;
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        z-index: 999;
     }
     
     .nav-links li {

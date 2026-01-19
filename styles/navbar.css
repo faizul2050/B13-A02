@@ -96,3 +96,11 @@ nav {
     color: #FFFFFF;
     text-decoration: none;
 }
+.hamburger, #menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+.hamburger i {
+    color: white;
+    font-size: 24px;
+}
