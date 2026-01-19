@@ -1,0 +1,67 @@
+.featured {
+    background: linear-gradient(135deg, #12001f, #2b0040);
+    padding: 80px 40px;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.episode-card {
+    background: linear-gradient(180deg, #2a0845, #1b002f);
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Video area */
+.video-thumb {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+.video-thumb iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.episode-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.episode-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d0c6dd;
+    margin-bottom: 18px;
+}
+
+.duration {
+    font-size: 14px;
+    color: #00ff9c;
+    font-weight: 600;
+}

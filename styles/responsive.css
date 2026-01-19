@@ -1,1 +1,75 @@
-/* responsive */
+/* --- RESPONSIVE MEDIA QUERIES --- */ 
+/* Small Devices (Mobile: up to 576px) */
+@media (max-width: 576px) {
+    
+    /* Navbar Mobile Styling */
+    .desktop-btn {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Checkbox Hack Logic */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Hero Section Mobile */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    /* Stats Section Mobile (2x2 Grid) */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Why Choose Mobile (Single Column) */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Host Section Mobile (Stacked) */
+    .host-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .host-img img {
+        width: 100%;
+        height: auto;
+    }
+}
