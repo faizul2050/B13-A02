@@ -43,3 +43,49 @@
   font-size: 15px;
   letter-spacing: 1px;
 }
+
+
+/* 05card-section start */
+.why-techwave {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
+  gap: 25px;
+
+}
+.card{
+  background:linear-gradient(145deg, #2b0b52, #1c0036);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+.card:hover{
+  transform: translateY(-8px);
+}
+.card img{
+  width: 45px;
+  margin-bottom: 15px;
+}
+.card h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card p{
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.card{
+  backdrop-filter: blur(10px);
+}
