@@ -48,6 +48,23 @@ body {
 .text-01 {
     
 }
+.text-02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text-02 div h1 {
+  max-width: 700px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+.text-02 div p{
+  max-width: 700px;
+  text-align: center;
+  color: gray;
+}
 
 
     .btn-primary {
