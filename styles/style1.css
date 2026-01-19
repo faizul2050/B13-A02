@@ -52,6 +52,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 80px 0;
+    text-align: center;
 
 }
 .text-02 div h1 {
