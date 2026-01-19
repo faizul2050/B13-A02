@@ -25,6 +25,7 @@
     max-width: 1440px;
     margin: auto;
 }
+/* button style */ 
 .btn-01 {
     border-radius: 25px;
     padding: 10px 20px;
@@ -33,11 +34,44 @@
     background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
     cursor: pointer;
     transition: 0.3s;
-
 }
 .btn-01:hover {
     transform: scale(1.1);
 }
+.btn-02 {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #f8f8f8;
+    background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-02:hover {
+    transform: scale(1.1);
+}
+.subscribe-btn{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 35px;
+    background-color: transparent;
+    border: 2px solid #00FF88;
+    border-radius: 50px;
+    color: #00FF88;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.subscribe-btn:hover {
+    transform: scale(1.1);
+}
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
 
 nav {
     display: flex;
