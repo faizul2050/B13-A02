@@ -86,7 +86,7 @@ nav img {
         top: 25px;
     }
 
-    /* 3. Mobile Menu Styling (Hidden by Default) */
+    /* 3. Mobile Menu Styling */
     .nav-links {
         display: none;
         position: absolute;
