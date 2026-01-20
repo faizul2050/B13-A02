@@ -1,104 +1,115 @@
-
-
-/* shared style */ 
-
-
-/* white */
-.text-white{
-    color: #FFFFFF;
-}
-/* ash */
-.text-ash{
-    color: #1A0B2E;
-}
-/* green */
-.text-green{
-    color: #00FF88;
-}
-
-
-
-/* header style */ 
-
-/* common class */
-.container{
+/* Global Reset & Container */
+.container {
     max-width: 1440px;
     margin: auto;
-}
-/* button style */ 
-.btn-01 {
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: #f8f8f8;
-    background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-01:hover {
-    transform: scale(1.1);
-}
-.btn-02 {
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: #f8f8f8;
-    background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-02:hover {
-    transform: scale(1.1);
-}
-.subscribe-btn{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 35px;
-    background-color: transparent;
-    border: 2px solid #00FF88;
-    border-radius: 50px;
-    color: #00FF88;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.subscribe-btn:hover {
-    transform: scale(1.1);
-}
-.hero-buttons{
-    display: flex;
-    justify-content: center;
-    
+    padding: 0 20px;
 }
 
+/*  Navigation Bar Layout */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    text-decoration: none;
+    padding: 15px 0;
+    position: relative;
+    height: 80px;
 }
 
-.link-parent {
+/* Logo Style */
+nav img {
+    height: 40px;
+    width: auto;
+}
+
+/* Desktop Menu (Default) */
+.nav-links {
     display: flex;
-    gap: 22px;
+    gap: 30px;
     list-style: none;
-    color: #FFFFFF;
-
+    margin: 0;
+    padding: 0;
 }
 
-.link-parent a {
-    display: flex;
-    gap: 22px;
-    list-style: none;
-    color: #FFFFFF;
+.nav-links a {
     text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
-.hamburger, #menu-toggle {
+
+.nav-links a:hover {
+    color: #00FF88;
+}
+
+/*  Buttons  */
+.btn-01, .desktop-btn {
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: #f8f8f8;
+    background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Checkbox Logic (Hidden Globally)  */
+#menu-toggle {
+    display: none;
+}
+
+/*  Hamburger Icon (Hidden on Desktop)  */
+.hamburger {
     display: none;
     cursor: pointer;
 }
+
 .hamburger i {
     color: white;
-    font-size: 24px;
+    font-size: 28px;
+}
+
+/* RESPONSIVE MEDIA QUERY (Mobile Devices)*/
+@media (max-width: 768px) {
+    
+    /* 1. Hide Desktop Button */
+    .desktop-btn {
+        display: none;
+    }
+    
+    /* 2. Show Hamburger Icon */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    /* 3. Mobile Menu Styling (Hidden by Default) */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #1a0b2e;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 9999;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Menu Open Logic */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
 }
