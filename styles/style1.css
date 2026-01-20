@@ -1,93 +1,136 @@
-body {
-    background-color: rgba(26, 11, 46, 1);
-}
-
-/* universal selector */
+/* 1. Reset and Global Styles */
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-/* Hero/Banner section start */
+
+body {
+    background-color: #1a0b2e;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+/* 2. Hero Section */
 .hero-section {
-    display: flex;
-    gap: 20px;
-    justify-content:center;
-    align-items: center;
-    background-image: url(../assets/hero-bg.png);
+    background-image: url(./assets/hero-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 80vh;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
     padding: 20px;
 }
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
 }
 
-.hero-content p {
-    color: gray;
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
+/* 3. Podcast Circle Design */
 .podcast-circle {
     width: 250px;
     height: 250px;
-    background:linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
+    background: linear-gradient(135deg, #F7E93F, #FB09B4, #9100F8);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 40px rgba(145, 0, 248, 0.5);
     margin: 0 auto 30px;
+}
+
+.podcast-circle img {
+    width: 50%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* 4. New Badge Design */
+.new-badge {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    background-color: #00FF85; 
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 5. Text Styles */
+.text-01 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.text-01 p {
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* 6. Button Section */
+.hero-buttons {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Spotify Button */
+.btn-spotify {
+    background: linear-gradient(to right, #F7E93F, #FB09B4);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-}
-.container p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-.text-01 {
-    
+.btn-spotify:hover {
+    transform: translateY(-3px); 
+    filter: brightness(1.1); 
+    box-shadow: 0 10px 20px rgba(251, 9, 180, 0.4); 
 }
-.text-02{
+
+/* Subscribe Button */
+.btn-subscribe {
+    background: transparent;
+    border: 2px solid #00FF85;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #00FF85;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 80px 0;
-    text-align: center;
-
-}
-.text-02 div h1 {
-  max-width: 700px;
-  text-align: center;
-  color: #FFFFFF;
-
-}
-.text-02 div p{
-  max-width: 700px;
-  text-align: center;
-  color: gray;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-
-    .btn-primary {
-    background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.btn-outline {
-    border: 2px solid white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-left: 10px;
-    display: inline-block;
-}
+.btn-subscribe:hover {
+    background-color: #00FF85; 
+    color: #000; 
+    transform: translateY(-3px); 
+    box-shadow: 0 0 20px rgba(0, 255, 13
